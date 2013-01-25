@@ -29,6 +29,8 @@ libraryDependencies ++= Seq(
   "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
 )
 
+// import task settings
 seq(wro4jSettings: _*)
 
+// If you use xsbt-web-plugin, this will add compiled files to your war file:
 (webappResources in Compile) <+= (targetFolder in generateResources in Compile)

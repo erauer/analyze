@@ -10,4 +10,4 @@ libraryDependencies <+= sbtVersion(v => v match {
   case x if (x.startsWith("0.12")) => "com.github.siasia" %% "xsbt-web-plugin" % "0.12.0-0.2.11.1"
 })
 
-addSbtPlugin("com.bowlingx" %% "xsbt-wro4j-plugin" % "0.1.0-SNAPSHOT")
+addSbtPlugin("com.bowlingx" %% "xsbt-wro4j-plugin" % "0.2.0-SNAPSHOT")
