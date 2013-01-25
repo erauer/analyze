@@ -12,5 +12,6 @@ class Scalatra extends LifeCycle {
 
     // Mount one or more servlets
     context.mount(new MyServlet, "/*")
+    context.mount(new DataController, "/data/*")
   }
 }
