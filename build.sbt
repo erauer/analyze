@@ -1,3 +1,7 @@
+import com.bowlingx.sbt.plugins.Wro4jPlugin._
+import Wro4jKeys._
+
+
 organization := "net.spottedzebra"
 
 name := "My Scalatra Web App"
@@ -24,3 +28,7 @@ libraryDependencies ++= Seq(
   "com.mongodb.casbah" %% "casbah" % "2.1.5-1",
   "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
 )
+
+seq(wro4jSettings: _*)
+
+(webappResources in Compile) <+= (targetFolder in generateResources in Compile)

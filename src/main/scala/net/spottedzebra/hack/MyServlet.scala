@@ -10,9 +10,10 @@ import scala.xml._
 class MyServlet extends ScalatraServlet with ScalateSupport with CorsSupport {
 
   val mongo = MongoConnection()
-  val coll = mongo("blog")("msgs")
+  val col = mongo("blog")("msgs")
 
   get("/") {
+    println(col)
     <html>
       <body>
         <h1>Hello, world!</h1>
