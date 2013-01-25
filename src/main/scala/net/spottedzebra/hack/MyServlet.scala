@@ -4,7 +4,13 @@ import org.scalatra._
 import scalate.ScalateSupport
 import org.scalatra.CorsSupport
 
+import com.mongodb.casbah.Imports._
+import scala.xml._
+
 class MyServlet extends ScalatraServlet with ScalateSupport with CorsSupport {
+
+  val mongo = MongoConnection()
+  val coll = mongo("blog")("msgs")
 
   get("/") {
     <html>
