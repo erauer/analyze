@@ -2,8 +2,9 @@ package net.spottedzebra.hack
 
 import org.scalatra._
 import scalate.ScalateSupport
+import org.scalatra.CorsSupport
 
-class MyServlet extends ScalatraServlet with ScalateSupport {
+class MyServlet extends ScalatraServlet with ScalateSupport with CorsSupport {
 
   get("/") {
     <html>
